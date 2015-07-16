@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
 import java.util.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -8,7 +10,7 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 	private JLabel label2 = new JLabel("輸入檔案");
 	private JLabel label3 = new JLabel("輸入內容:");
 	private JLabel label4 = new JLabel("處理結果:");
-	private JLabel label5 = new JLabel("輸入內容:");
+	
 	
 	private JTextField textField1 = new JTextField();
 	private JTextField textField2 = new JTextField();
@@ -29,7 +31,30 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 	}
 	
 	public void init(){
+		JPanel p1 = new JPanel();
+		p1.setLayout(new GridLayout(1,4));
+		p1.add(label2);
+		p1.add(textField1);
+		p1.add(button1);
+		p1.add(button2);
 		
+		JPanel p2 = new JPanel();
+		p2.setLayout(new GridLayout(1,4));
+		p2.add(textField4);
+		p2.add(button3);
+		p2.add(button4);
+		
+		JPanel p3 = new JPanel();
+		p3.setLayout(new FlowLayout());
+		p3.add(label1);
+		p3.add(p1);
+		p3.add(label3);
+		p3.add(textField2);
+		p3.add(label4);
+		p3.add(textField3);
+		p3.add(p2);
+		
+		add(p3);
 	}
 	public void actionPerformed(ActionEvent e){
 		
