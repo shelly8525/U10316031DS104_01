@@ -20,6 +20,17 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 	private JButton button3 = new JButton("處理結果存檔");
 	private JButton button4 = new JButton("Clear all");
 	
+	public U10316031DS104_01(){
+		this.setTitle("C統計");
+		this.init();
+		this.setLocation(500,1000);
+		this.setResizable(false);
+		pack();
+	}
+	
+	public void init(){
+		
+	}
 	public void actionPerformed(ActionEvent e){
 		
 	}
