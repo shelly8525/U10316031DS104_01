@@ -1,9 +1,13 @@
-import javax.swing.*;
-import java.awt.GridLayout;
 import java.awt.FlowLayout;
-import java.util.*;
-import java.awt.event.ActionListener;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class U10316031DS104_01 extends JFrame implements ActionListener{
 	private JLabel label1 = new JLabel("C統計");
@@ -23,14 +27,6 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 	private JButton button4 = new JButton("Clear all");
 	
 	public U10316031DS104_01(){
-		this.setTitle("C統計");
-		this.init();
-		this.setLocation(500,1000);
-		this.setResizable(false);
-		pack();
-	}
-	
-	public void init(){
 		JPanel p1 = new JPanel();
 		p1.setLayout(new GridLayout(1,4));
 		p1.add(label2);
@@ -45,7 +41,7 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 		p2.add(button4);
 		
 		JPanel p3 = new JPanel();
-		p3.setLayout(new FlowLayout());
+		p3.setLayout(new FlowLayout(FlowLayout.LEFT,1,1));
 		p3.add(label1);
 		p3.add(p1);
 		p3.add(label3);
@@ -56,13 +52,18 @@ public class U10316031DS104_01 extends JFrame implements ActionListener{
 		
 		add(p3);
 	}
+	
+	@Override
 	public void actionPerformed(ActionEvent e){
 		
 	}
-	
 	public static void main(String[] args){
-		U10316031DS104_01 frame = new U10316031DS104_01();
+		JFrame frame = new U10316031DS104_01();
+		frame.setTitle("C統計");
+		frame.setSize(500,1000);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
 		frame.setVisible(true);
 	}
 }
